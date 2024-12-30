@@ -5,11 +5,11 @@ import time
 client_id = "1234567890"  # здесь вы задаёте айди, который берёте отсюда: https://discord.com/developers/applications
 rpc = Presence(client_id)
 rpc.connect()
-
+# надпись "играет в ..." задаётся в названии приложения
 try:
     while True:
         rpc.update(
-            details="ваш текст",  # надпись "играет в ..."
+            details="ваш текст",  # описание
             large_image="id_photo",  # иконка программы, которая задаётся здесь: https://discord.com/developers/applications/айди/rich-presence/assets
             large_text="ваш текст",  # какая будет надпись при наведении на иконку
             start=time.time()
